@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar carta - DuelCards</title>
+</head>
+<body>
+    <header>
+        <h1>DuelCards</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cartas.html">Ver cartas</a></li>
+                <li><a href="cadastrar.html" aria-current="page">Anunciar carta</a></li>
+                <li><a href="conta.html#login">Login</a></li>
+                <li><a href="conta.html#cadastro">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastrar anúncio de carta</h2>
+        <p>Informe a edição, a conservação e o valor da carta que você deseja vender.</p>
+        <p>Em uma aplicação completa, você entraria na sua conta, preencheria o anúncio e publicaria a oferta no catálogo.</p>
+        <p><small>Demonstração: o formulário valida os campos, mas ainda não publica anúncios.</small></p>
+        <form action="cadastrar.html#demonstracao-anuncio" method="get">
+            <fieldset>
+                <legend>Dados da carta</legend>
+                <p>
+                    <label for="nome">Nome da carta:</label><br>
+                    <input type="text" id="nome" name="nome" required maxlength="100">
+                </p>
+                <p>
+                    <label for="tipo">Tipo:</label><br>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecione</option>
+                        <option value="monstro">Monstro</option>
+                        <option value="magia">Magia</option>
+                        <option value="armadilha">Armadilha</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="edicao">Edição:</label><br>
+                    <input type="text" id="edicao" name="edicao" maxlength="80">
+                </p>
+                <p>
+                    <label for="ano">Ano da edição:</label><br>
+                    <input type="number" id="ano" name="ano" min="1999" max="2026" step="1" placeholder="2023" required>
+                </p>
+                <p>
+                    <label for="numero">Número ou código da carta na coleção:</label><br>
+                    <input type="text" id="numero" name="numero" maxlength="30" placeholder="Ex.: LOB-PT001" required>
+                </p>
+                <p>
+                    <label for="raridade">Raridade:</label><br>
+                    <select id="raridade" name="raridade">
+                        <option value="comum">Comum</option>
+                        <option value="rara">Rara</option>
+                        <option value="super-rara">Super rara</option>
+                        <option value="ultra-rara">Ultra rara</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="idioma">Idioma:</label><br>
+                    <select id="idioma" name="idioma">
+                        <option value="portugues">Português</option>
+                        <option value="ingles">Inglês</option>
+                        <option value="japones">Japonês</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="estado">Estado de conservação:</label><br>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="novo">Novo</option>
+                        <option value="usado-bom">Usado, bom estado</option>
+                        <option value="usado-marcas">Usado, com marcas</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados da venda</legend>
+                <p>
+                    <label for="preco">Preço em reais:</label><br>
+                    <input type="number" id="preco" name="preco" min="0.01" step="0.01" required>
+                </p>
+                <p>
+                    <label for="quantidade">Quantidade:</label><br>
+                    <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+                </p>
+                <p>
+                    <label for="vendedor">Nome do vendedor:</label><br>
+                    <input type="text" id="vendedor" name="vendedor" required maxlength="80">
+                </p>
+                <p>
+                    <label for="descricao">Descrição do anúncio:</label><br>
+                    <textarea id="descricao" name="descricao" rows="5" cols="40" placeholder="Conte mais sobre a carta"></textarea>
+                </p>
+                <p>
+                    <label for="imagem">Link da imagem da carta (opcional):</label><br>
+                    <input type="url" id="imagem" name="imagem" placeholder="https://exemplo.com/carta.jpg">
+                </p>
+            </fieldset>
+
+            <p><button type="submit">Testar anúncio</button> <button type="reset">Limpar</button></p>
+        </form>
+        <section id="demonstracao-anuncio" aria-labelledby="titulo-demonstracao">
+            <h3 id="titulo-demonstracao">Como funciona o teste</h3>
+            <p>Ao enviar um formulário válido, você chega a esta seção. Os dados ainda não são salvos e a lista continua com três anúncios de exemplo.</p>
+            <p><a href="cartas.html">Ver como os anúncios aparecem no catálogo</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>DuelCards — protótipo acadêmico em HTML.</p>
+        <p><a href="cartas.html">Ver anúncios</a></p>
+    </footer>
+</body>
+</html>
