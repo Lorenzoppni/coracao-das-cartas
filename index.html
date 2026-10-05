@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuelCards - Compra e venda de cartas Yu-Gi-Oh!</title>
+</head>
+<body>
+    <header>
+        <h1>DuelCards</h1>
+        <p>Compre e venda cartas de Yu-Gi-Oh!</p>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="cartas.html">Ver cartas</a></li>
+                <li><a href="cadastrar.html">Anunciar carta</a></li>
+                <li><a href="conta.html#login">Login</a></li>
+                <li><a href="conta.html#cadastro">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="boas-vindas">
+            <h2 id="boas-vindas">Encontre a próxima carta do seu deck</h2>
+            <p>Um espaço simples para jogadores e colecionadores anunciarem e encontrarem cartas.</p>
+            <p><a href="cartas.html">Explorar anúncios</a> | <a href="cadastrar.html">Criar anúncio</a></p>
+        </section>
+
+        <section aria-labelledby="busca-inicial">
+            <h2 id="busca-inicial">Procurar carta</h2>
+            <form action="cartas.html" method="get">
+                <label for="busca">Nome da carta:</label>
+                <input type="search" id="busca" name="busca" placeholder="Ex.: Mago Negro">
+                <button type="submit">Buscar</button>
+            </form>
+            <p><small>A pesquisa aparece como estrutura nesta etapa; os anúncios são exemplos fixos.</small></p>
+        </section>
+
+        <section aria-labelledby="destaques">
+            <h2 id="destaques">Cartas em destaque</h2>
+            <article>
+                <h3>Mago Negro</h3>
+                <figure>
+                    <img src="https://images.ygoprodeck.com/images/cards/46986414.jpg" alt="Imagem da carta Mago Negro" width="120" height="175">
+                    <figcaption>Monstro normal · R$ 25,00</figcaption>
+                </figure>
+                <p>Vendedor: João Colecionador</p>
+                <details>
+                    <summary>Ver detalhes do Mago Negro</summary>
+                    <p>O monstro de confiança de Yugi: um mago de Trevas com 2500 de ataque e 2100 de defesa.</p>
+                    <p><a href="mago-negro.html">História e informações completas do Mago Negro</a></p>
+                </details>
+            </article>
+            <article>
+                <h3>Dragão Branco de Olhos Azuis</h3>
+                <figure>
+                    <img src="https://images.ygoprodeck.com/images/cards/89631139.jpg" alt="Imagem da carta Dragão Branco de Olhos Azuis" width="120" height="175">
+                    <figcaption>Monstro normal · R$ 39,90</figcaption>
+                </figure>
+                <p>Vendedora: Ana Duelista</p>
+                <details>
+                    <summary>Ver detalhes do Dragão Branco de Olhos Azuis</summary>
+                    <p>O dragão que acompanha Seto Kaiba, com 3000 de ataque e 2500 de defesa.</p>
+                    <p><a href="dragao-branco.html">História e informações completas do Dragão Branco</a></p>
+                </details>
+            </article>
+            <article>
+                <h3>Pote da Ganância</h3>
+                <figure>
+                    <img src="https://images.ygoprodeck.com/images/cards/55144522.jpg" alt="Imagem da carta Pote da Ganância" width="120" height="175">
+                    <figcaption>Magia normal · R$ 18,50</figcaption>
+                </figure>
+                <p>Vendedora: Marina TCG</p>
+                <details>
+                    <summary>Ver detalhes do Pote da Ganância</summary>
+                    <p>Uma magia que permite comprar duas cartas do deck para a mão.</p>
+                    <p><a href="pote-da-ganancia.html">História e informações completas do Pote da Ganância</a></p>
+                </details>
+            </article>
+            <p><small>Preços e vendedores fictícios, usados apenas para demonstrar os anúncios.</small></p>
+        </section>
+
+        <section aria-labelledby="minha-conta">
+            <h2 id="minha-conta">Sua conta</h2>
+            <p>Já tem uma conta? <a href="conta.html#login">Faça login</a>.</p>
+            <p>Está começando? <a href="conta.html#cadastro">Cadastre-se</a> para conhecer a área de compra e venda.</p>
+        </section>
+
+        <aside aria-labelledby="como-funciona">
+            <h2 id="como-funciona">Como funciona</h2>
+            <ol>
+                <li>Veja os anúncios e escolha uma carta.</li>
+                <li>Confira preço, estado e vendedor nos detalhes.</li>
+                <li>Cadastre um anúncio para oferecer uma carta sua.</li>
+            </ol>
+            <p>Projeto acadêmico: compra, pagamento e envio ainda não estão implementados.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <hr>
+        <p>DuelCards — protótipo acadêmico em HTML. Yu-Gi-Oh! pertence aos seus respectivos titulares.</p>
+        <p><a href="index.html">Voltar ao início</a></p>
+    </footer>
+</body>
+</html>
