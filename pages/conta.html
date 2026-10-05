@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e cadastro - DuelCards</title>
+</head>
+<body>
+    <header>
+        <h1>DuelCards</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cartas.html">Ver cartas</a></li>
+                <li><a href="cadastrar.html">Anunciar carta</a></li>
+                <li><a href="conta.html#login">Login</a></li>
+                <li><a href="conta.html#cadastro">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Login e cadastro</h2>
+        <p>Acesse sua conta ou preencha o cadastro abaixo.</p>
+        <p><small>Esta é uma demonstração: os campos são validados pelo navegador, mas contas e senhas não são salvas nem verificadas.</small></p>
+        <nav aria-label="Escolher formulário">
+            <p><a href="#login">Já tenho conta</a> | <a href="#cadastro">Quero me cadastrar</a></p>
+        </nav>
+
+        <section id="login" aria-labelledby="titulo-login">
+            <h3 id="titulo-login">Login</h3>
+            <form action="conta.html#demonstracao" method="get">
+                <!-- Sem name nos dados pessoais: este teste não os envia pela URL. -->
+                <p>
+                    <label for="login-email">E-mail:</label><br>
+                    <input type="email" id="login-email" autocomplete="username" required>
+                </p>
+                <p>
+                    <label for="login-senha">Senha:</label><br>
+                    <input type="password" id="login-senha" autocomplete="current-password" minlength="8" required>
+                </p>
+                <p><small>Use uma senha de exemplo com pelo menos 8 caracteres.</small></p>
+                <button type="submit" name="teste" value="login">Testar login</button>
+            </form>
+            <p>Não tem conta? <a href="#cadastro">Veja o cadastro logo abaixo</a>.</p>
+        </section>
+
+        <hr>
+        <section id="cadastro" aria-labelledby="titulo-cadastro">
+            <h3 id="titulo-cadastro">Criar conta</h3>
+            <form action="conta.html#demonstracao" method="get">
+                <!-- Os valores destes campos não são transmitidos nesta demonstração. -->
+                <p>
+                    <label for="cadastro-nome">Nome:</label><br>
+                    <input type="text" id="cadastro-nome" autocomplete="name" minlength="2" maxlength="80" required>
+                </p>
+                <p>
+                    <label for="cadastro-email">E-mail:</label><br>
+                    <input type="email" id="cadastro-email" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="cadastro-senha">Senha:</label><br>
+                    <input type="password" id="cadastro-senha" autocomplete="new-password" minlength="8" required>
+                </p>
+                <p><small>Use uma senha de exemplo com pelo menos 8 caracteres.</small></p>
+                <button type="submit" name="teste" value="cadastro">Testar cadastro</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+
+        <hr>
+        <section id="demonstracao" aria-labelledby="titulo-demonstracao">
+            <h3 id="titulo-demonstracao">Como funciona o teste</h3>
+            <p>Quando os campos estão válidos, o formulário traz você até esta seção. Isso demonstra o preenchimento e a navegação; nenhuma sessão é iniciada e nenhuma conta é criada.</p>
+            <p>Em uma aplicação completa, o cadastro seria salvo e o login conferiria o e-mail e a senha antes de liberar a conta.</p>
+            <p><a href="cartas.html">Continuar para as cartas</a> | <a href="cadastrar.html">Conhecer o formulário de anúncio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>DuelCards — protótipo acadêmico em HTML.</p>
+        <p><a href="index.html">Voltar ao início</a> | <a href="cartas.html">Ver cartas</a></p>
+    </footer>
+</body>
+</html>
