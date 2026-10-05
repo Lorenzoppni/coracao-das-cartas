@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas à venda - DuelCards</title>
+</head>
+<body>
+    <header>
+        <h1>DuelCards</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cartas.html" aria-current="page">Ver cartas</a></li>
+                <li><a href="cadastrar.html">Anunciar carta</a></li>
+                <li><a href="conta.html#login">Login</a></li>
+                <li><a href="conta.html#cadastro">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cartas à venda</h2>
+        <p>Confira nossas três cartas. Clique em Ver detalhes para expandir o resumo na própria página.</p>
+        <p><small>Preços, vendedores e condições de venda são exemplos fictícios.</small></p>
+
+        <aside aria-labelledby="filtros">
+            <h3 id="filtros">Pesquisa, filtros e ordenação</h3>
+            <form action="cartas.html" method="get">
+                <p>
+                    <label for="busca">Nome:</label>
+                    <input type="search" id="busca" name="busca" placeholder="Digite uma carta">
+                </p>
+                <p>
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="">Todos</option>
+                        <option value="monstro">Monstro</option>
+                        <option value="magia">Magia</option>
+                        <option value="armadilha">Armadilha</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="">Todos</option>
+                        <option value="novo">Novo</option>
+                        <option value="usado">Usado</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="preco-maximo">Preço máximo (R$):</label>
+                    <input type="number" id="preco-maximo" name="preco-maximo" min="0" step="0.01">
+                </p>
+                <p>
+                    <label for="ordem">Ordenar por:</label>
+                    <select id="ordem" name="ordem">
+                        <option value="recentes">Mais recentes</option>
+                        <option value="menor-preco">Menor preço</option>
+                        <option value="maior-preco">Maior preço</option>
+                        <option value="nome">Nome</option>
+                    </select>
+                </p>
+                <button type="submit">Aplicar</button>
+                <a href="cartas.html">Limpar campos</a>
+            </form>
+            <p><small>Os controles estão prontos para uma etapa futura. A lista ainda não muda com os filtros.</small></p>
+        </aside>
+
+        <section aria-labelledby="resultados">
+            <h3 id="resultados">Anúncios cadastrados</h3>
+            <table>
+                <caption>Cartas disponíveis no protótipo</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Carta</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Vendedor</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="mago-negro">
+                        <th scope="row">
+                            <img src="https://images.ygoprodeck.com/images/cards/46986414.jpg" alt="Carta Mago Negro" width="70" height="102"><br>
+                            Mago Negro
+                        </th>
+                        <td>Monstro</td>
+                        <td>Usado, bom estado</td>
+                        <td>R$ 25,00</td>
+                        <td>João Colecionador</td>
+                        <td>
+                            <details>
+                                <summary>Ver detalhes</summary>
+                                <p>Mago de Trevas, nível 7. ATK 2500 / DEF 2100. Uma das cartas marcantes de Yugi.</p>
+                                <p><a href="mago-negro.html">História e ficha completa</a></p>
+                            </details>
+                            <p><a href="editar.html">Editar</a> | <button type="button" disabled>Excluir</button></p>
+                        </td>
+                    </tr>
+                    <tr id="dragao-branco">
+                        <th scope="row">
+                            <img src="https://images.ygoprodeck.com/images/cards/89631139.jpg" alt="Carta Dragão Branco de Olhos Azuis" width="70" height="102"><br>
+                            Dragão Branco de Olhos Azuis
+                        </th>
+                        <td>Monstro</td>
+                        <td>Novo</td>
+                        <td>R$ 39,90</td>
+                        <td>Ana Duelista</td>
+                        <td>
+                            <details>
+                                <summary>Ver detalhes</summary>
+                                <p>Dragão de Luz, nível 8. ATK 3000 / DEF 2500. A carta símbolo de Seto Kaiba.</p>
+                                <p><a href="dragao-branco.html">História e ficha completa</a></p>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr id="pote-da-ganancia">
+                        <th scope="row">
+                            <img src="https://images.ygoprodeck.com/images/cards/55144522.jpg" alt="Carta Pote da Ganância" width="70" height="102"><br>
+                            Pote da Ganância
+                        </th>
+                        <td>Magia</td>
+                        <td>Novo</td>
+                        <td>R$ 18,50</td>
+                        <td>Marina TCG</td>
+                        <td>
+                            <details>
+                                <summary>Ver detalhes</summary>
+                                <p>Magia normal que permite comprar duas cartas do deck para a mão.</p>
+                                <p><a href="pote-da-ganancia.html">História e ficha completa</a></p>
+                            </details>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>A edição e a exclusão são demonstradas no primeiro anúncio. O botão Excluir ainda não remove o item.</small></p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>DuelCards — protótipo acadêmico em HTML.</p>
+        <p><a href="index.html">Voltar ao início</a></p>
+    </footer>
+</body>
+</html>
